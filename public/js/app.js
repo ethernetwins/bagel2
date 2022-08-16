@@ -1,0 +1,10 @@
+var restaurant_url = "/restaurant";
+var restaurant_array = []; 
+var restaurantCount = 0;
+var category = "Restaurants";
+var currentIndex=0;
+var comment_url = "/comment";
+var comment_array = []; 
+var starBWImage = 'images/grey_star.jpg';
+var starImage = 'images/gold_star.png';
+var rating = 0;

@@ -1,0 +1,40 @@
+<div class="modal fade" id="movieModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <button type="button" class="close bg-light" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <div class="col-5">
+                        <img class="img-fluid img-thumbnail" id="pic">
+                    </div>
+                    <div class="col-7">
+                        <table class="table table-hover table-responsive table-sm">
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Name</span></td>
+                                <td id="restaurant"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Address</span></td>
+                                <td id="address"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-12 px-3"><span class="badge badge-pill badge-dark font-weight-bold float-left">Description</span>
+                    <p id="desc"></p>
+                </div>
+                <div class="col-xs-12 px-3 text-center">
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer1"></iframe>
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer2"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bg-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

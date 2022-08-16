@@ -1,0 +1,27 @@
+ .u-section-1 {
+  background-image: none;
+  min-height: 482px;
+}
+.container{
+  max-width: 1200px;
+  margin:auto;
+  overflow: auto;
+}
+.table{
+  font-size: 20px;
+  width: 100%;
+  color: black;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+   .u-section-1 {
+    min-height: 481px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    min-height: 348px;
+  }
+}
