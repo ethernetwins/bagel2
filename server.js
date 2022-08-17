@@ -7,7 +7,7 @@ var menuController = require('./controllers/menuController');
 var memberController = require('./controllers/memberController');
 var app = express(); // set variable app to be an instance of express framework. From now on, app is the express
 
-app.use(express.static("./public")); //static files are to be served from the public folder - for eg. html, images, css
+app.use(express.static("./public/Restaurant.html")); //static files are to be served from the public folder - for eg. html, images, css
 app.use(express.json()); // json() is a method inbuilt in express to recognize the incoming Request Object from the web client as a JSON Object.
 // In time to come we will need to accept new or edited comments from user
 
