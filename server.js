@@ -26,10 +26,10 @@ app.route('/user').post(userController.addUser);
 
 app.route('/menu').get(menuController.getAllMenu);
 
-app.route('/member').get(memberController.getAllMember);
+//app.route('/member').get(memberController.getAllMember);
 app.route('/member').post(memberController.addMember);
 app.route('/member/:id').delete(memberController.deleteMember);
-//app.route('/member').put(memberController.updateMember);
+app.route('/member').put(memberController.updateMember);
 //app.route('/login').post(memberController.loginMember);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
