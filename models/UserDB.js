@@ -15,5 +15,5 @@ class UserDB{
         var sql = "DELETE from user WHERE user_id = ?";
         return db.query(sql, [userId], callback);
     }
-    
+}
 module.exports = UserDB;
