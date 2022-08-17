@@ -15,11 +15,5 @@ class UserDB{
         var sql = "DELETE from user WHERE user_id = ?";
         return db.query(sql, [userId], callback);
     }
-    updateUser(user, callback){
-        var sql = "UPDATE user SET profile_picture = ?, password = ?, first_name = ?, last_name = ?, gender = ?, mobile_number = ?, email_address = ? WHERE user_id = ?";
-        return db.query(sql, [user.getprofile_picture(), user.getpassword(), user.getfirst_name(),
-            user.getlast_name(), user.getgender(), user.getmobile_number(), user.getemail_address(), user.getuser_id()], callback);
-    }
-}
-
+    
 module.exports = UserDB;
