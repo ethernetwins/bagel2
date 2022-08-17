@@ -57,4 +57,4 @@ function updateMember(request, respond) {
 
 }
 
-module.exports = { loginMember, deleteMember, updateMember };
+module.exports = { addMember, deleteMember, updateMember };
