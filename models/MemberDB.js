@@ -2,14 +2,6 @@
 
 var db = require('../db-connections');
 class MemberDB{
-    getAllMember(callback){
-        var sql = "SELECT username,phone_number from `member`";
-        db.query(sql, callback);
-    }
-    loginMember(username, callback){
-        var sql = "SELECT password from `member` WHERE username = ?";
-        db.query(sql, [username], callback);
-    }
     addMember(username, password, phonenumber, first_name, last_name, gender, email, callback){
         var sql = "INSERT INTO member (username, password, phone_number, first_name, last_name, gender, email_address) VALUES(?, ?, ?, ?, ?, ?, ?)";
         db.query(sql, [username, password, phonenumber, first_name, last_name, gender, email], callback);
