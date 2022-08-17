@@ -1,21 +1,8 @@
 "use strict";
 const MemberDB = require('../models/MemberDB');
-const bcrypt = require('bcrypt');
-var jwt = require('jsonwebtoken')
-var secret = "sckey";
 
 var memberDB = new MemberDB();
 
-function getAllMember(request, respond) {
-    memberDB.getAllMember(function (error, result) {
-        if (error) {
-            respond.json(error);
-        }
-        else {
-            respond.json(result)
-        }
-    });
-}
 
 function addMember(request, respond) {
     var username = request.body.username;
@@ -36,25 +23,7 @@ function addMember(request, respond) {
     })
 };
 
-function loginMember(request, respond) {
-    var username = request.body.username;
-    var password = request.body.password;
-    memberDB.loginMember(username, function (error, result) {
-        if (error) {
-            respond.json(error);
-        }
-        else {
-            const hash = result[0].password;
-            var flag = bcrypt.compareSync(password, hash);
-            if (flag) {
-                var token = jwt.sign(username, secret);
-                respond.json({ result: token });
-            } else {
-                respond.json({ result: "invaild" });
-            }
-        }
-    })
-};
+
 
 function deleteMember(request, respond) {
     var memberId = request.params.id;
@@ -73,7 +42,7 @@ function updateMember(request, respond) {
     var phone_number = request.body.phone_number;
     var token = request.body.token;
     try {
-        var decoded = jwt.verify(token, secret);
+        
         memberDB.updateMember(username, phone_number, function (error, result) {
             if (error) {
                 respond.json(error);
