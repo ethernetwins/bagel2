@@ -86,14 +86,14 @@ function translateText() {
     };
 
     request.send(JSON.stringify(trans));
-    lblName.innerHTML = trans[0];
+    lblName.innerHTML = translate[0];
 }
 
 function getTranslate(){
     var request = new XMLHttpRequest();
     request.open('GET', translate_url, true);
     request.onload = function () {
-        trans = JSON.parse(request.responseText);
+        translate = JSON.parse(request.responseText);
         console.log(trans);
     };
 
