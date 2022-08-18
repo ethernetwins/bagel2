@@ -78,11 +78,13 @@ function translateText() {
         console.log(restaurant_array);
         displayRestaurant(category);
     };
-    request.setRequestHeader("Content-Type", "http://54.234.167.199:3000", 'POST')
+    request.open('POST', '/polly');
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.send(JSON.stringify ({"text" : qText}));
     var lblName = document.getElementById("lblName");
     var trans = document.getElementById("txtName").value;
     console.log(trans)
 
-    request.send(JSON.stringify(trans));
+    request.send(JSON.stringify(request));
     lblName.innerHTML = restaurant_array;
 }
