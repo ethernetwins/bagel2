@@ -88,7 +88,6 @@ function translateText() {
     lblName.innerHTML = restaurant_array;
 }
 
-import * as boto3 from 'boto3';
 var translate_client;
 translate_client = boto3.client("translate");
 
