@@ -78,6 +78,7 @@ function translateText() {
         console.log(restaurant_array);
         displayRestaurant(category);
     };
+    request.setRequestHeader('Access-Control-Allow-Origin', '54.234.167.199:3000')
     var lblName = document.getElementById("lblName");
     var trans = document.getElementById("txtName").value;
     console.log(trans)
