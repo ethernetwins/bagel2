@@ -80,7 +80,6 @@ function translateText() {
     };
     request.open('POST', '/polly');
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    request.send(JSON.stringify ({"text" : qText}));
     var lblName = document.getElementById("lblName");
     var trans = document.getElementById("txtName").value;
     console.log(trans)
