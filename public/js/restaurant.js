@@ -71,33 +71,18 @@ function showRestaurantDetails(element) {
 }
 
 function translateText() {
+    var request = new XMLHttpRequest();
+
+    request.open("POST",translate_url, true);
+    request.setRequestHeader("Content-type", "application/json");
     var trans = document.getElementById("txtName").value;
-    console.log(trans)
-    var request = new XMLHttpRequest();
-    request.open('POST', translate_url, true);
-    
-    var lblName = document.getElementById("lblName");
-    
+    var payload={"text": trans};
 
-    request.setRequestHeader("Content-Type", "application/json");
-     var payload={"text": trans};
     request.send(JSON.stringify(payload));
+    console.log(payload)
     request.onload = function () {
-        console.log("new comment sent");
-        getTranslate();
+        comment_array = JSON.parse(translation.responseText);
+        console.log(comment_array);
     };
-
-    
-    lblName.innerHTML = translate;
-}
-
-function getTranslate(){
-    var request = new XMLHttpRequest();
-    request.open('GET', translate_url, true);
-    request.onload = function () {
-        translate = JSON.parse(request.responseText);
-        console.log(translate);
-    };
-
-    request.send();
+    lblName.innerHTML = comment_array;
 }
