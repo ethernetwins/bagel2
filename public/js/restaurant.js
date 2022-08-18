@@ -69,6 +69,7 @@ function showRestaurantDetails(element) {
     document.getElementById("address").textContent = restaurant_array[item].restaurant_address;
     document.getElementById("desc").textContent = restaurant_array[item].description;
 }
+
 function translateText() {
     var trans = document.getElementById("txtName").value;
 
@@ -81,11 +82,11 @@ function translateText() {
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () {
         console.log("new comment sent");
-        var translate = getTranslate();
+        getTranslate();
     };
 
     request.send(JSON.stringify(trans));
-    lblName.innerHTML = translate;
+    lblName.innerHTML = trans[0];
 }
 
 function getTranslate(){
