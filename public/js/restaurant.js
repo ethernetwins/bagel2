@@ -76,6 +76,7 @@ function translateText() {
     request.open("POST",translate_url, true);
     request.setRequestHeader("Content-type", "application/json");
     var trans = document.getElementById("txtName").value;
+    var lblName = document.getElementById("btnCopy");
     var payload={"text": trans};
 
     request.send(JSON.stringify(payload));
