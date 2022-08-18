@@ -78,7 +78,7 @@ function translateText() {
         console.log(restaurant_array);
         displayRestaurant(category);
     };
-    request.setRequestHeader('Access-Control-Allow-Origin', translate_url)
+    request.setRequestHeader("Content-Type", "application/json")
     var lblName = document.getElementById("lblName");
     var trans = document.getElementById("txtName").value;
     console.log(trans)
