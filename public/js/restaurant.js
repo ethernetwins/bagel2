@@ -86,15 +86,15 @@ function translateText() {
     };
 
     request.send(JSON.stringify(trans));
-    lblName.innerHTML = translate[0];
+    lblName.innerHTML = translate_array[0];
 }
 
 function getTranslate(){
     var request = new XMLHttpRequest();
     request.open('GET', translate_url, true);
     request.onload = function () {
-        translate = JSON.parse(request.responseText);
-        console.log(translate);
+        translate_array = JSON.parse(request.responseText);
+        console.log(translate_array);
     };
 
     request.send();
