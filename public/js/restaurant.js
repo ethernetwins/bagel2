@@ -78,8 +78,7 @@ function translateText() {
         console.log(restaurant_array);
         displayRestaurant(category);
     };
-    request.open('POST', '/polly');
-    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.setRequestHeader("Content-Type", "http://54.234.167.199:3000")
     var lblName = document.getElementById("lblName");
     var trans = document.getElementById("txtName").value;
     console.log(trans)
