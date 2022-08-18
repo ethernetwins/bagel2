@@ -72,7 +72,7 @@ function showRestaurantDetails(element) {
 
 function translateText() {
     var trans = document.getElementById("txtName").value;
-
+    console.log(trans)
     var request = new XMLHttpRequest();
     request.open('POST', translate_url, true);
     
