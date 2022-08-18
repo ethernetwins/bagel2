@@ -8,3 +8,4 @@ var comment_array = [];
 var starBWImage = 'images/grey_star.jpg';
 var starImage = 'images/gold_star.png';
 var rating = 0;
+var translate_url =  'https://pbifhdqua4.execute-api.us-east-1.amazonaws.com/test/translate'
