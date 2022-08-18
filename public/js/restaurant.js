@@ -82,7 +82,7 @@ function translateText() {
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () {
         console.log("new comment sent");
-        translate = getTranslate();
+        var translate = getTranslate();
     };
 
     request.send(JSON.stringify(trans));
