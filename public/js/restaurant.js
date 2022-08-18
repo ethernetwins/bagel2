@@ -81,7 +81,7 @@ function translateText() {
     request.send(JSON.stringify(payload));
     console.log(payload)
     request.onload = function () {
-        comment_array = JSON.parse(translation.responseText);
+        comment_array = JSON.parse(request.responseText);
         console.log(comment_array);
     };
     lblName.innerHTML = comment_array;
