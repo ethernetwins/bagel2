@@ -85,7 +85,7 @@ function translateText() {
         translate_array = JSON.parse(request.responseText);
         console.log(translate_array);
         alert(translate_array);
-        lblName.innerHTML = translate_array;
     };
+    lblName.innerHTML = translate_array;
     
 }
