@@ -70,3 +70,14 @@ function showRestaurantDetails(element) {
     document.getElementById("desc").textContent = restaurant_array[item].description;
 }
 
+function translateText() {
+    var request = new XMLHttpRequest();
+    request.open('POST', translate_url, true);
+    request.onload = function () {
+        restaurant_array = JSON.parse(request.responseText);
+        console.log(restaurant_array);
+        displayRestaurant(category);
+    };
+
+    request.send();
+}
