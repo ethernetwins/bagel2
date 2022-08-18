@@ -69,7 +69,6 @@ function showRestaurantDetails(element) {
     document.getElementById("address").textContent = restaurant_array[item].restaurant_address;
     document.getElementById("desc").textContent = restaurant_array[item].description;
 }
-
 function translateText() {
     var request = new XMLHttpRequest();
     request.open('POST', translate_url, true);
@@ -82,6 +81,6 @@ function translateText() {
     console.log(trans)
 
 
-    request.send(JSON.stringify(comment));
+    request.send(JSON.stringify(trans));
     lblName.innerHTML = restaurant_array;
 }
