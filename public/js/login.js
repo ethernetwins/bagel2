@@ -20,3 +20,13 @@ function loginMe(){
     var payload = {username:username, password:password}
     loginUser.send(JSON.stringify(payload));
 }
+
+const onSignUpClicked = async () => {
+    const response = await axios.post('/api/signup', {
+        email: emailValue,
+        password: passwordValue,
+    });
+    const{ token } = response.data;
+    setToken(token);
+    history.push(`/please-verify?email=${encodeURIComponent(emailValue)}`);
+}
