@@ -81,7 +81,7 @@ function translateText() {
 
     request.setRequestHeader("Content-Type", "application/json");
      var payload={"text": trans};
-    request.send(JSON.stringify(trans));
+    request.send(JSON.stringify(payload));
     request.onload = function () {
         console.log("new comment sent");
         getTranslate();
