@@ -76,13 +76,12 @@ function translateText() {
     request.onload = function () {
         restaurant_array = JSON.parse(request.responseText);
         console.log(restaurant_array);
-        displayRestaurant(category);
     };
-    request.setRequestHeader("Content-Type", "http://54.234.167.199:3000")
     var lblName = document.getElementById("lblName");
     var trans = document.getElementById("txtName").value;
     console.log(trans)
 
-    request.send(JSON.stringify(request));
+
+    request.send(JSON.stringify(comment));
     lblName.innerHTML = restaurant_array;
 }
