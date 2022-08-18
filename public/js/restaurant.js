@@ -94,7 +94,7 @@ function getTranslate(){
     var request = new XMLHttpRequest();
     request.open('GET', translate_url, true);
     request.onload = function () {
-        translate = JSON.parse(request.responseText);
+        translate_array = JSON.parse(request.responseText);
         console.log(translate);
     };
 
