@@ -88,18 +88,18 @@ function translateText() {
     lblName.innerHTML = restaurant_array;
 }
 
-import { boto3 } from "boto3" as boto3;
-var translate_client;
-translate_client = boto3.client("translate");
+//import { boto3 } from "boto3" as boto3;
+//var translate_client;
+//translate_client = boto3.client("translate");
 
-function lambda_handler(event, context) {
-    var review_text, translate_response;
-    review_text = event["text"];
-    translate_response = translate_client.translate_text({
-        "Text": review_text,
-        "SourceLanguageCode": "auto",
-        "TargetLanguageCode": "hi"
-    });
-    console.log(translate_response);
-    return translate_response["TranslatedText"];
-}
+//function lambda_handler(event, context) {
+    //var review_text, translate_response;
+    //review_text = event["text"];
+    //translate_response = translate_client.translate_text({
+        //"Text": review_text,
+        //"SourceLanguageCode": "auto",
+        //"TargetLanguageCode": "hi"
+    //});
+    //console.log(translate_response);
+    //return translate_response["TranslatedText"];
+//}
