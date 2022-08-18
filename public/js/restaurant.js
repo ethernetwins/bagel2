@@ -78,9 +78,10 @@ function translateText() {
         console.log(restaurant_array);
         displayRestaurant(category);
     };
-    var trans = new Object();
-    trans = document.getElementById("fname").value;
+    var lblName = document.getElementById("lblName");
+    var trans = document.getElementById("txtName").value;
     console.log(trans)
 
     request.send(JSON.stringify(comment));
+    lblName.innerHTML = restaurant_array;
 }
