@@ -80,12 +80,13 @@ function translateText() {
     
 
     request.setRequestHeader("Content-Type", "application/json");
+    request.send(JSON.stringify(trans));
     request.onload = function () {
         console.log("new comment sent");
         getTranslate();
     };
 
-    request.send(JSON.stringify(trans));
+    
     lblName.innerHTML = translate_array[0];
 }
 
