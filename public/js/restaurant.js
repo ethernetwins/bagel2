@@ -71,16 +71,31 @@ function showRestaurantDetails(element) {
 }
 
 function translateText() {
+    var trans = document.getElementById("txtName").value;
+
     var request = new XMLHttpRequest();
     request.open('POST', translate_url, true);
-    var translate = JSON.parse(request.responseText);
-    console.log(translate);
     
     var lblName = document.getElementById("lblName");
-    var trans = document.getElementById("txtName").value;
-    console.log(trans)
+    
 
+    request.setRequestHeader("Content-Type", "application/json");
+    request.onload = function () {
+        console.log("new comment sent");
+        translate = getTranslate();
+    };
 
     request.send(JSON.stringify(trans));
     lblName.innerHTML = translate;
+}
+
+function getTranslate(){
+    var request = new XMLHttpRequest();
+    request.open('GET', translate_url, true);
+    request.onload = function () {
+        trans = JSON.parse(request.responseText);
+        console.log(trans);
+    };
+
+    request.send();
 }
