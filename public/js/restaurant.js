@@ -32,7 +32,7 @@ function displayRestaurant(category) {
         table.insertAdjacentHTML('beforeend', cell);
         restaurantCount++;
     }
-    message = restaurantCount + " Restaurants found";
+    message = restaurantCount + " Jobs found";
     document.getElementById("summary").textContent = message;
     document.getElementById("parent").textContent = "";
 }
